@@ -1,0 +1,148 @@
+/*modificamos pie*/
+.footer-redes{ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(46, 8, 118, 0.953);
+}
+/*color de fondo*/
+.fondo{
+    background-color: cadetblue;
+}
+
+/*css al mapa*/
+.mapa { 
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*le damos espacio a los links, de la pagina link*/  
+.boton-web{
+    margin-top: 10px;
+}
+/*ponemos estilos*/
+
+h2{
+    margin-top: 25px;
+    display: flex;
+}
+
+.formulario{
+    margin-top: 20px;
+    background-color: rgb(13, 158, 144);
+}
+
+.foto {
+    text-align: center;
+    margin-top: 3%;
+    width: auto;
+}
+
+.texto-texto {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    margin-top: 1px;
+    border: 0px solid black;
+    border-style: dashed;
+    
+}
+
+
+/*transformacion y animacion*/
+input:hover{
+    border-radius: 20px;
+}
+
+.animacion{
+    text-align: center;
+    color: rgb(207, 207, 31);
+    animation-name: animacion;
+    animation-duration: 3s;
+    animation-iteration-count: initial;
+    animation-delay: 0s;
+}
+
+@keyframes animacion {
+    0%{
+        color: rgb(207, 207, 31);
+        font-size: 32px;
+    }
+}
+
+/*aplicamos grid*/
+.grid-container{
+    background-color: rgb(3, 56, 75);
+    justify-content: space-evenly;
+    margin-top: 40px;
+    border: 2px solid black;
+    display: grid;
+    /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+    grid-template-columns: repeat(4, 20%);
+    /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+    grid-template-rows: repeat(1, autopx);
+    /*establecemos el espaciado entre cajas*/
+    gap: 1px 1px;
+    
+    grid-template-areas: 
+    "noticia-1 noticia-2 noticia-3 noticia-4"
+    }
+
+/*activamos las areas a acomodora*/
+.noticia-1{
+    grid-area: noticia-1;
+    background-color: rgb(64, 83, 86);
+}
+.noticia-2{
+    grid-area: noticia-2;
+    background-color: rgb(64, 83, 86);
+    
+}
+.noticia-3{
+    grid-area: noticia-3;
+    background-color: rgb(64, 83, 86);
+}
+.noticia-4{
+    grid-area: noticia-4;
+    background-color:rgb(64, 83, 86) ;
+}
+
+/*para modificar la vista a celu, tablet,etc*/
+@media screen and (max-width: 768px){ 
+    .grid-container{
+        background-color: rgb(3, 56, 75);
+        border: px solid black;
+        display: grid;
+        /*establecemos cuantas columnas y qeu anchos tendran respecto a los padres*/
+        grid-template-columns: repeat(2, 40%);
+        /*establecemos cantidad de filas y que alto tendran al padre, es el piso*/
+        grid-template-rows: repeat(4, autopx);
+        /*establecemos el espaciado entre cajas*/
+        gap: 1px 1px;
+        
+        grid-template-areas: 
+        "noticia-1 noticia-2"
+        "noticia-1 noticia-2"
+        "noticia-3 noticia-4"
+        "noticia-3 noticia-4"
+        ;
+    }
+}
+/*activamos las areas a acomodora*/
+.noticia-1{
+    grid-area: noticia-1;
+    background-color: rgb(64, 83, 86);
+}
+.noticia-2{
+    grid-area: noticia-2;
+    background-color: rgb(64, 83, 86);
+}
+.noticia-3{
+    grid-area: noticia-3;
+    background-color: rgb(64, 83, 86);
+}
+.noticia-4{
+    grid-area: noticia-4;
+    background-color: rgb(64, 83, 86);
+}
+
+
